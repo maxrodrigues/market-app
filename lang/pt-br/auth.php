@@ -14,4 +14,5 @@ return [
 
     'username_required' => 'O campo usuário é obrigatório',
     'password_required' => 'O campo senha é obrigatório',
+    'password_min' => 'O campo de senha deve ter pelo menos 6 caracteres',
 ];

@@ -22,8 +22,18 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required',
-            'password' => 'required',
+            'username' => 'required|email',
+            'password' => 'required|min:6|max:128',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'username.required' => __('auth.username_required'),
+            'password.required' => __('auth.password_required'),
+            'password.min' => __('auth.password_min'),
+            'password.max' => __('auth.password_max'),
         ];
     }
 }

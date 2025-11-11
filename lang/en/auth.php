@@ -13,5 +13,6 @@ return [
 
     'username_required' => 'The email address field is required.',
     'password_required' => 'The password field is required.',
+    'password_min' => 'The password field must have at least 6 characters.',
 
 ];
