@@ -32,6 +32,7 @@ it ('Check if the password field has more than 6 characters.', function () {
         ->assertStatus(\Symfony\Component\HttpFoundation\Response::HTTP_FOUND);
 
 });
+
 todo ('Check if the password field contains uppercase letters, lowercase letters, and numbers.');
 todo ('Returns an error when credentials do not match.');
 todo ('redirects to the administrative dashboard after successful login.');
