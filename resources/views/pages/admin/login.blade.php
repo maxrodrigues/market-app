@@ -24,7 +24,12 @@
                     </div>
                 </div>
                 <div class="flex flex-col mt-5">
-                    <label class="text-sm mb-1">Password</label>
+                    <label class="text-sm mb-1 flex justify-between items-baseline">
+                        <span>Password</span>
+                        <span class="text-sky-600 font-semibold text-xs">
+                            <a href="{{ route('admin.forgot-password') }}" class="hover:text-sky-800" >Forgot Password?</a>
+                        </span>
+                    </label>
                     <div class="relative flex items-center">
                         <i class="fa-solid fa-lock absolute insert-0 text-gray-300 pl-2 text-lg"></i>
                         <input
