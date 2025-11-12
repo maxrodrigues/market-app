@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Password;
 
 class LoginRequest extends FormRequest
 {
@@ -22,8 +23,17 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => 'required',
-            'password' => 'required',
+            'username' => 'required|email',
+            'password' => ['required', Password::min(6)->mixedCase()->numbers()->symbols()],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'username.required' => __('auth.username_required'),
+            'password.required' => __('auth.password_required'),
+            'password.min' => __('auth.password_min'),
         ];
     }
 }

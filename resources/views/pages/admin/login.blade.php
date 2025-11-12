@@ -6,44 +6,48 @@
                     <i class="fa-solid fa-store text-3xl text-sky-600"></i>
                 </div>
                 <div class="flex flex-col items-center">
-                    <h1 class="font-bold text-2xl font-display">Admin Panel Login</h1>
-                    <span class="text-sm text-gray-600  font-display">Please enter your credentials to access the dashboard.</span>
+                    <h1 class="font-bold text-2xl">{{ __('auth.login_title') }}</h1>
+                    <span class="text-sm text-gray-600 text-center">{{ __('auth.login_subtitle') }}</span>
                 </div>
             </div>
-
-            <div class="px-3 space-y-2">
+            <form action="{{ route('admin.login.process') }}" method="POST">
+                @csrf
+                @method('POST')
+                <div class="px-3 space-y-2">
                 <div class="flex flex-col">
-                    <label class="text-sm mb-1">Email Address</label>
-                    <div class="relative flex items-center">
-                        <i class="fa-solid fa-envelope absolute insert-0 text-gray-300 pl-2 text-lg"></i>
+                    <label class="text-sm mb-1">{{ __('auth.username_field') }}</label>
+                    <div class="relative flex flex-col">
+                        <i class="fa-solid fa-envelope absolute insert-0 top-3 text-gray-300 pl-2 text-lg"></i>
                         <input
                             type="text"
                             placeholder="you@example.com"
                             class="bg-admin py-2 rounded-md pl-8 w-full placeholder:text-gray-400 outline-none border border-gray-300"
                         />
+                        @error('username')
+                            <span class="text-xs text-red-600 mt-1">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="flex flex-col mt-5">
-                    <label class="text-sm mb-1 flex justify-between items-baseline">
-                        <span>Password</span>
-                        <span class="text-sky-600 font-semibold text-xs">
-                            <a href="{{ route('admin.forgot-password') }}" class="hover:text-sky-800" >Forgot Password?</a>
-                        </span>
-                    </label>
-                    <div class="relative flex items-center">
-                        <i class="fa-solid fa-lock absolute insert-0 text-gray-300 pl-2 text-lg"></i>
+                    <label class="text-sm mb-1">{{ __('auth.password_field') }}</label>
+                    <div class="relative flex flex-col">
+                        <i class="fa-solid fa-lock absolute insert-0 top-3 text-gray-300 pl-2 text-lg"></i>
                         <input
                             type="password"
                             placeholder="Enter your password"
                             class="bg-admin py-2 rounded-md pl-8 w-full placeholder:text-gray-400 outline-none border border-gray-300"
                         />
-                        <i class="fa-solid fa-eye absolute insert-0 right-0 text-gray-300 pr-7 text-lg"></i>
+                        <i class="fa-solid fa-eye absolute insert-0 top-3 right-0 text-gray-300 pr-7 text-lg"></i>
+                        @error('password')
+                        <span class="text-xs text-red-600 mt-1">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="mt-10">
-                    <button class="bg-sky-600 py-2 w-full rounded-lg font-semibold text-white">Login</button>
+                    <button type="submit" class="bg-sky-600 hover:bg-sky-800 py-2 w-full rounded-lg font-semibold text-white">Login</button>
                 </div>
             </div>
+            </form>
         </div>
         <div class="mt-10">
             <span class="text-sm text-gray-400">© FreshMart. All rights reserved.</span>
