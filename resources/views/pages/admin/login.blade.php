@@ -45,5 +45,8 @@
                 </div>
             </div>
         </div>
+        <div class="mt-10">
+            <span class="text-sm text-gray-400">© FreshMart. All rights reserved.</span>
+        </div>
     </div>
 </x-layouts.admin>
