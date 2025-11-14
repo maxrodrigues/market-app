@@ -20,6 +20,7 @@
                         <i class="fa-solid fa-envelope absolute insert-0 top-3 text-gray-300 pl-2 text-lg"></i>
                         <input
                             type="text"
+                            name="username"
                             placeholder="you@example.com"
                             class="bg-admin py-2 rounded-md pl-8 w-full placeholder:text-gray-400 outline-none border border-gray-300"
                         />
@@ -34,6 +35,7 @@
                         <i class="fa-solid fa-lock absolute insert-0 top-3 text-gray-300 pl-2 text-lg"></i>
                         <input
                             type="password"
+                            name="password"
                             placeholder="Enter your password"
                             class="bg-admin py-2 rounded-md pl-8 w-full placeholder:text-gray-400 outline-none border border-gray-300"
                         />
