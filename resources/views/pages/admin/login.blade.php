@@ -30,7 +30,12 @@
                     </div>
                 </div>
                 <div class="flex flex-col mt-5">
-                    <label class="text-sm mb-1">{{ __('auth.password_field') }}</label>
+                    <label class="text-sm mb-1 flex justify-between items-baseline">
+                        <span>{{ __('auth.password_field') }}</span>
+                        <span class="text-sky-600 font-semibold text-xs">
+                            <a href="{{ route('admin.forgot-password') }}" class="hover:text-sky-800" >Forgot Password?</a>
+                        </span>
+                    </label>
                     <div class="relative flex flex-col">
                         <i class="fa-solid fa-lock absolute insert-0 top-3 text-gray-300 pl-2 text-lg"></i>
                         <input
