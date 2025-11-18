@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FreshMarket Admin Panel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     @vite('resources/css/app.css')
     <script src="https://kit.fontawesome.com/fb91899bbd.js" crossorigin="anonymous"></script>
-    <script>
+    {{--<script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        "display": ["Work Sans", "Noto Sans", "sans-serif"]
+                        "display": ["Montserrat", "sans-serif"]
                     }
                 }
             }
         }
-    </script>
+    </script>--}}
 </head>
 <body class="bg-admin font-display">
     {{ $slot }}
