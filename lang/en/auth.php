@@ -8,6 +8,9 @@ return [
     'login_title' => 'Admin Panel Login',
     'login_subtitle' => 'Please enter your credentials to access the dashboard.',
 
+    'forgot_title' => 'Forgot Your Password?',
+    'forgot_subtitle' => 'No problem. Enter the email address associated with your account and will send you a link to reset your password.',
+
     'username_field' => 'Email Address',
     'password_field' => 'Password',
 

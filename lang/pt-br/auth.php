@@ -9,6 +9,9 @@ return [
     'login_title' => 'Login Painel de Controle',
     'login_subtitle' => 'Por favor, insira suas credenciais para acessar o painel de controle.',
 
+    'forgot_title' => 'Esqueceu sua senha?',
+    'forgot_subtitle' => 'Sem problemas. Digite o endereço de e-mail associado à sua conta e enviaremos um link para redefinir sua senha.',
+
     'username_field' => 'E-mail',
     'password_field' => 'Senha',
 

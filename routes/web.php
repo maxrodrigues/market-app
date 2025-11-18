@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\Auth\ForgotPasswordController;
+use App\Http\Controllers\Admin\Auth\ForgotPasswordScreenController;
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\Auth\ProcessLoginController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,12 +28,13 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/login', \App\Http\Controllers\Admin\Auth\LoginController::class)->name('login');
-    Route::get('/forgot-password', \App\Http\Controllers\Admin\Auth\ForgotPasswordScreenController::class)->name('forgot-password');
-    Route::post('/login', \App\Http\Controllers\Admin\Auth\ProcessLoginController::class)->name('login.process');
+    Route::get('/login', LoginController::class)->name('login');
+    Route::get('/reset-password', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset-password');
+    Route::post('/reset-password', [ForgotPasswordController::class, 'sendResetLink'])->name('reset-password');
+    Route::post('/login', ProcessLoginController::class)->name('login.process');
 
 
 //    Route::group([], function () {
-        Route::get('dashboard', \App\Http\Controllers\Admin\DashboardController::class)->name('dashboard');
+        Route::get('dashboard', DashboardController::class)->name('dashboard');
 //    });
 });
