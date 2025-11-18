@@ -29,7 +29,7 @@ class ForgotPasswordController extends Controller
             ResetPassword::createUrlUsing(function ($hashedToken) use ($user) {
                 return $hashedToken . $user;
             });
-            
+
         } catch (Exception $e) {
             /**
              * TODO: criar script de log
