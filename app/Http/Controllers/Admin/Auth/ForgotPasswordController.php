@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
@@ -50,13 +51,6 @@ class ForgotPasswordController extends Controller
         }
     }
 
-    public function validateResetLink(Request $request)
-    {
-        /**
-         * Validar o token e redirecionar para criar nova senha.
-         */
-    }
-
     public function resetPassword(Request $request)
     {
         try {
@@ -66,9 +60,37 @@ class ForgotPasswordController extends Controller
 
             return view('pages.admin.auth.create-new-pass');
         } catch (Exception $e) {
-            dd($e->getMessage());
-            return view('pages.admin.auth.create-new-pass')
-                ->with('error', $e->getMessage());
+            return redirect()->route('admin.login')
+                ->withErrors(['not_found' => 'erro']);
+        }
+    }
+
+    public function createNewPassword(Request $request)
+    {
+        try {
+            $data = Validator::make($request->all(), [
+                'email' => 'required|email|exists:users,email',
+                'password' => ['required', 'confirmed', \Illuminate\Validation\Rules\Password::min(6)->mixedCase()->numbers()->symbols()],
+            ]);
+
+            if ($data->fails()) {
+                return redirect()->back()->withErrors($data)->withInput();
+            }
+
+            $user = User::where('email', $request->email)->firstOrFail();
+            if (! $user) {
+                return redirect()->back()->withErrors(['not_found' => 'erro']);
+            }
+
+            $user->password = Hash::make($request->password);
+            $user->save();
+
+            Auth::attempt([$user->email, $request->password]);
+
+            $request->session()->regenerate();
+            return redirect()->intended(route('admin.dashboard'));
+        } catch (Exception $e) {
+
         }
     }
 }

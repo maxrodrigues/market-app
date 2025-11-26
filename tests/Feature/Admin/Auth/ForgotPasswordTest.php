@@ -2,6 +2,7 @@
 
 # FIRST STEP
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 it ("has forgot password page", function () {
@@ -39,6 +40,36 @@ it ("create temporary recover link", function () {
 todo("send email when found user");
 
 # SECOND STEP
-todo("return error when recover link is invalid");
-todo("return error when password is invalid");
-todo("redirect user when recover password");
+it ("return error when recover link is invalid", function () {
+    $this->get(route('admin.reset-password.get', ['token' => Str::random(60)]))
+        ->assertStatus(Response::HTTP_FOUND)
+        ->assertSessionHasErrors(['not_found']);
+});
+
+it ("return error when password is invalid", function () {
+    $dataUser = [
+        'email' => 'testemail@test.com',
+        'password' => 'password',
+        'password_confirmation' => 'password',
+    ];
+
+    $this->post(route('admin.reset-password.post'), $dataUser)
+        ->assertStatus(Response::HTTP_FOUND)
+        ->assertSessionHasErrors(['password']);
+
+});
+
+it ("redirect user when recover password", function () {
+    $user = \App\Models\User::factory()->create();
+    $pwd = fake()->password(6, 15);
+    $dataUser = [
+        'email' => $user->email,
+        'password' => $pwd,
+        'password_confirmation' => $pwd,
+    ];
+
+    $this->post(route('admin.reset-password.post'), $dataUser)
+        ->assertSessionHasNoErrors()
+        ->assertStatus(Response::HTTP_FOUND)
+        ->assertRedirect(route('admin.dashboard'));
+});
