@@ -10,7 +10,7 @@
                     <span class="text-sm text-gray-600 text-center">{{ __('auth.forgot_subtitle') }}</span>
                 </div>
             </div>
-            <form action="" method="post">
+            <form action="{{ route('admin.forgot-password.post') }}" method="post">
                 @csrf
                 @method('POST')
                 <div class="px-3 space-y-2">

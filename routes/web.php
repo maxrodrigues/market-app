@@ -29,9 +29,13 @@ Route::get('/login', function () {
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/login', LoginController::class)->name('login');
-    Route::get('/reset-password', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset-password');
-    Route::post('/reset-password', [ForgotPasswordController::class, 'sendResetLink'])->name('reset-password');
     Route::post('/login', ProcessLoginController::class)->name('login.process');
+
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('forgot-password.get');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLink'])->name('forgot-password.post');
+
+    Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'resetPassword'])->name('reset-password.get');
+    Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('reset-password.post');
 
 
 //    Route::group([], function () {
