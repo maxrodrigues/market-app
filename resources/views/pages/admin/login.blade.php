@@ -33,7 +33,7 @@
                     <label class="text-sm mb-1 flex justify-between items-baseline">
                         <span>{{ __('auth.password_field') }}</span>
                         <span class="text-sky-600 font-semibold text-xs">
-                            <a href="{{ route('admin.reset-password') }}" class="hover:text-sky-800" >Forgot Password?</a>
+                            <a href="{{ route('admin.forgot-password.get') }}" class="hover:text-sky-800" >Forgot Password?</a>
                         </span>
                     </label>
                     <div class="relative flex flex-col">
