@@ -1,1 +1,1 @@
-<i class="fa-solid fa-house"></i>
+<i {{ $attributes->class(["fa-solid", "fa-house"])->merge([$class]) }}></i>
