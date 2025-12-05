@@ -20,7 +20,7 @@
         }
     </script>
 </head>
-<body class="bg-admin font-display">
+<body class="bg-admin">
     {{ $slot }}
 </body>
 </html>
