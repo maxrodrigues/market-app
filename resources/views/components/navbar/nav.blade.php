@@ -8,8 +8,8 @@
             <span class="text-sm text-gray-600">Admin Panel</span>
         </div>
     </div>
-    <div>
-        <x-navbar.nav-item name="Dashboard" icon="house"/>
+    <div class="space-y-1">
+        <x-navbar.nav-item name="Dashboard" icon="house" isActive/>
         <x-navbar.nav-item name="Orders" icon="cart-shopping"/>
         <x-navbar.nav-item name="Product Catalog" icon="box-archive"/>
         <x-navbar.nav-item name="Customers" icon="users"/>
