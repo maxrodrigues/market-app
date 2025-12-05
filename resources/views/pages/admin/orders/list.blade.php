@@ -62,13 +62,11 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="flex justify-center items-center space-x-2">
+                                        <a href="{{ route('admin.orders.view') }}">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
                                         <form action="#">
-                                            <button>
-                                                <i class="fa-solid fa-eye"></i>
-                                            </button>
-                                        </form>
-                                        <form action="#">
-                                            <button>
+                                            <button type="submit">
                                                 <i class="fa-solid fa-trash-can"></i>
                                             </button>
                                         </form>

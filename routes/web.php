@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\ForgotPasswordScreenController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\ProcessLoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Orders\ListController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
         Route::get('dashboard', DashboardController::class)->name('dashboard');
 
-        Route::get('orders', \App\Http\Controllers\Admin\Orders\ListController::class)->name('orders.get');
+        Route::get('orders', ListController::class)->name('orders.get');
+        Route::get('orders/view', \App\Http\Controllers\Admin\Orders\ViewController::class)->name('orders.view');
     });
 });
