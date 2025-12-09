@@ -32,7 +32,7 @@
                                 <th class="py-3 px-5">Product</th>
                                 <th class="py-3 px-5">Quantity</th>
                                 <th class="py-3 px-5">Price</th>
-                                <th class="py-3 px-5">Subtotal</th>
+                                <th class="py-3 px-5 text-right ">Subtotal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,12 +49,37 @@
                                 </td>
                                 <td class="py-3 text-center">2</td>
                                 <td class="py-3 text-center">$1.29</td>
-                                <td class="py-3 text-center font-semibold">$2.68</td>
+                                <td class="py-3 px-5 text-right font-semibold">$2.68</td>
                             </tr>
                         @endfor
                         </tbody>
-                        <tfoot>
-
+                        <tfoot class="bg-gray-100">
+                            <tr class="">
+                                <td></td>
+                                <td colspan="2" class="pt-10 pb-1 text-gray-600">Subtotal:</td>
+                                <td class="pt-10 pb-1 px-5 text-right font-semibold">$81.07</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2" class="py-1 text-gray-600">Shipping:</td>
+                                <td class="py-1 px-5 text-right font-semibold">$5.00</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2" class="py-1 text-gray-600">Tax:</td>
+                                <td class="py-1 px-5 text-right font-semibold">$3.43</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3" class="py-1 pr-5 text-right">
+                                    <hr class="text-gray-300"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2" class="py-5 font-semibold">Total:</td>
+                                <td class="py-3 px-5 text-right font-semibold">$89.50</td>
+                            </tr>
                         </tfoot>
                     </table>
                 </div>
