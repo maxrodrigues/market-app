@@ -11,7 +11,7 @@
     <div class="space-y-1">
         <x-navbar.nav-item name="Dashboard" icon="house"/>
         <x-navbar.nav-item name="Orders" icon="cart-shopping" route="admin.orders.get"/>
-        <x-navbar.nav-item name="Product Catalog" icon="box-archive"/>
+        <x-navbar.nav-item name="Product Catalog" icon="box-archive" route="admin.products.get"/>
         <x-navbar.nav-item name="Customers" icon="users"/>
         <x-navbar.nav-item name="Analytics and Reports" icon="chart-line"/>
         <x-navbar.nav-item name="Settings" icon="gear"/>

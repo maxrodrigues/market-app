@@ -44,5 +44,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::get('orders', ListController::class)->name('orders.get');
         Route::get('orders/view', \App\Http\Controllers\Admin\Orders\ViewController::class)->name('orders.view');
+
+        Route::get('products', \App\Http\Controllers\Admin\Products\ListController::class)->name('products.get');
     });
 });
