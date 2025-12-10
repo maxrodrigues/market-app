@@ -90,6 +90,38 @@
                 <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Order History</span>
                 </div>
+                <div class="px-7 py-7">
+                    <ol class="relative border-s border-gray-300">
+                        <li class="mb-5 ms-6">
+                            <span class="absolute flex justify-center items-center py-2 px-1.5 rounded-full bg-sky-200 -left-3.5 ring-8 ring-white">
+                                <i class="fa-solid fa-check w-6 text-sky-400"></i>
+                            </span>
+                            <div class="flex flex-col ml-1 py-1">
+                                <span class="font-semibold">Order placed</span>
+                                <span class="text-gray-400">October, 25, 2025 at 02:40 PM</span>
+                                <span class="text-gray-400 font-medium">The customer successfully placed the order.</span>
+                            </div>
+                        </li>
+                        <li class="mb-5 ms-6">
+                            <span class="absolute flex justify-center items-center py-2 px-1.5 rounded-full bg-sky-200 -left-3.5 ring-8 ring-white">
+                                <i class="fa-solid fa-arrow-rotate-right w-6 text-sky-400"></i>
+                            </span>
+                            <div class="flex flex-col ml-1 py-1">
+                                <span class="font-semibold">Order processed</span>
+                                <span class="text-gray-400">October, 25, 2025 at 03:15 PM</span>
+                                <span class="text-gray-400 font-medium">Order has been processed and is ready for packing.</span>
+                            </div>
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span class="absolute flex justify-center items-center py-2 px-1.5 rounded-full bg-sky-200 -left-3.5 ring-8 ring-white">
+                                <i class="fa-solid fa-truck w-6 text-sky-400"></i>
+                            </span>
+                            <div class="flex flex-col ml-1 py-1">
+                                <span class="font-semibold">Shipped</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
 
