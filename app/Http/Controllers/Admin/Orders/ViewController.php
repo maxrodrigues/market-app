@@ -12,6 +12,6 @@ class ViewController extends Controller
      */
     public function __invoke(Request $request)
     {
-        dd('aqui');
+        return view('pages/admin/orders/view');
     }
 }
