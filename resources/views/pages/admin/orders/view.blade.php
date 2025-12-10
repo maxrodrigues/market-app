@@ -122,30 +122,31 @@
                     <span class="font-bold text-xl">Customer</span>
                 </div>
                 <div class="w-full py-3 px-5">
-                    <div>
-                        <img src="" />
-                        <div>
-                            <span>Olivia Smith</span>
-                            <span>customer@example.com</span>
+                    <div class="flex py-2 border-b border-gray-300 space-x-3 ">
+                        <img src="https://i.pravatar.cc/150?img=49" class="rounded-full w-14" />
+                        <div class="flex flex-col">
+                            <span class="text-sky-600 font-semibold">Olivia Smith</span>
+                            <span class="text-sm text-gray-400">customer@example.com</span>
                         </div>
                     </div>
-                    <div>
-                        <span>Shipping Address</span>
-                        <span>123 Maple Street</span>
-                        <span>Springfield, IL 62704</span>
-                        <span>United States</span>
+                    <div class="flex flex-col border-b border-gray-300 py-2 space-y-1">
+                        <span class="font-semibold">Shipping Address</span>
+                        <span class="text-sm text-gray-500">123 Maple Street</span>
+                        <span class="text-sm text-gray-500">Springfield, IL 62704</span>
+                        <span class="text-sm text-gray-500">United States</span>
                     </div>
-                    <div>
-                        <span>Billing Address</span>
-                        <span>Same as shipping address</span>
+                    <div class="flex flex-col border-b border-gray-300 py-2">
+                        <span class="font-semibold">Billing Address</span>
+                        <span class="text-sm text-gray-500">Same as shipping address</span>
                     </div>
-                    <div>
-                        <span>Payment Method</span>
-                        <div>
+                    <div class="flex flex-col py-2 space-y-2">
+                        <span class="font-semibold">Payment Method</span>
+                        <div class="flex space-x-2">
                             <div>
-                                <i class="fa-brands fa-cc-visa"></i>
+                                <!-- Change icon for image -->
+                                <i class="fa-brands fa-cc-visa text-xl"></i>
                             </div>
-                            <span>
+                            <span class="text-gray-500">
                                 Visa ending in 1234
                             </span>
                         </div>
