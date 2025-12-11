@@ -165,5 +165,16 @@
                 </div>
             </div>
         </div>
+        <div class="col-span-12">
+            <hr class="text-gray-300 my-3"/>
+            <div class="w-full flex justify-end items-center space-x-6">
+                <button class="py-2 px-5 bg-gray-300 rounded hover:bg-gray-400 hover:cursor-pointer">
+                    Cancel
+                </button>
+                <button class="py-2 px-5 bg-green-600 text-white rounded hover:bg-green-700 hover:cursor-pointer">
+                    Save Product
+                </button>
+            </div>
+        </div>
     </div>
 </x-layouts.admin-page>
