@@ -44,8 +44,15 @@
                 <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Price & Inventory</span>
                 </div>
-                <div>
-
+                <div class="px-3 py-4 grid grid-cols-2 gap-2">
+                    <div class="flex flex-col space-y-1">
+                        <label class="text-sm font-semibold">Price</label>
+                        <input type="text" placeholder="$ 0.00" class="bg-gray-100 px-4 py-2 rounded focus:outline-none"/>
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label class="text-sm font-semibold">Stock Quantity</label>
+                        <input type="text" placeholder="0" class="bg-gray-100 px-4 py-2 rounded focus:outline-none"/>
+                    </div>
                 </div>
             </div>
 
