@@ -34,8 +34,17 @@
                 <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Media</span>
                 </div>
-                <div>
-
+                <div class="px-3 py-4 w-full">
+                    <div class="w-full flex items-center justify-center">
+                        <label class="w-full flex flex-col justify-center items-center cursor-pointer bg-gray-100 rounded-lg border border-dashed border-gray-300">
+                            <div class="flex flex-col items-center justify-center p-6">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <p class="mb-2 text-sm"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                <p class="text-xs">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                            </div>
+                            <input multiple type="file" class="hidden"/>
+                        </label>
+                    </div>
                 </div>
             </div>
 
