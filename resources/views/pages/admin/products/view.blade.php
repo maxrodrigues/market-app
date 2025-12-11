@@ -54,8 +54,32 @@
                 <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Status</span>
                 </div>
-                <div>
+                <div class="px-3 my-5 flex flex-col space-y-2 w-full">
+                    <ul>
+                        <li class="my-3">
+                            <label for="status_activated" class="flex items-center justify-start w-full px-4 py-2.5 text-base border border-gray-300 rounded cursor-pointer has-checked:bg-sky-200 has-checked:border-sky-400">
+                                <input type="radio" name="status" id="status_activated" class="hidden"/>
+                                Active
+                            </label>
+                        </li>
+                        <li class="my-3">
+                            <label for="status_draft" class="flex items-center justify-start w-full px-4 py-2.5 text-base border border-gray-300 rounded cursor-pointer has-checked:bg-sky-200 has-checked:border-sky-400">
+                                <input type="radio" name="status" id="status_draft" class="hidden"/>
+                                Draft
+                            </label>
+                        </li>
+                        <li class="my-3">
+                            <label for="status_deactivated" class="flex items-center justify-start w-full px-4 py-2.5 text-base border border-gray-300 rounded cursor-pointer has-checked:bg-sky-200 has-checked:border-sky-400">
+                                <input type="radio" name="status" id="status_deactivated" class="hidden"/>
+                                Deactivated
+                            </label>
+                        </li>
+                    </ul>
 
+                    {{--<div class="border border-gray-300 rounded flex items-center px-2">
+                        <input type="radio" name="status" id="status_deactivated"/>
+                        <label for="status_deactivated" class="w-full py-3 px-1">Deactivated</label>
+                    </div>--}}
                 </div>
             </div>
         </div>

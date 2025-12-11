@@ -8,17 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     @vite('resources/css/app.css')
     <script src="https://kit.fontawesome.com/fb91899bbd.js" crossorigin="anonymous"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        "display": ["Work Sans", "Noto Sans", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-admin">
     {{ $slot }}
