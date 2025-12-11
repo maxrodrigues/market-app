@@ -69,7 +69,7 @@
                             </td>
                             <td class="text-center">
                                 <div class="flex justify-center items-center space-x-2">
-                                    <a href="{{ route('admin.orders.view') }}">
+                                    <a href="{{ route('admin.products.view') }}">
                                         <i class="fa-solid fa-edit"></i>
                                     </a>
                                     <form action="#">
