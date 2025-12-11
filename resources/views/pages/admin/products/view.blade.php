@@ -13,8 +13,28 @@
                 <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Product Information</span>
                 </div>
-                <div>
-
+                <div class="px-3 py-4 w-full space-y-3">
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm">Product Name</label>
+                        <input type="text" class="bg-gray-100 px-4 border border-gray-300 py-2 rounded text-sm focus:outline-none"/>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm">
+                            Product Description
+                            <span class="text-xs font-light text-red-600">Use Markdown to format the text.</span>
+                        </label>
+                        <textarea
+                            rows="5"
+                            placeholder="Enter a detailed description of the product"
+                            class="bg-gray-100 resize-none p-3 border border-gray-300 rounded text-sm focus:outline-none"
+                        ></textarea>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm">Category</label>
+                        <select class="bg-gray-100 py-2 rounded border border-gray-300 px-3 text-sm focus:outline-none">
+                            <option>Select Category</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -38,7 +58,7 @@
                     <div class="w-full flex items-center justify-center">
                         <label class="w-full flex flex-col justify-center items-center cursor-pointer bg-gray-100 rounded-lg border border-dashed border-gray-300">
                             <div class="flex flex-col items-center justify-center p-6">
-                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <i class="fa-solid fa-cloud-arrow-up text-2xl mb-3"></i>
                                 <p class="mb-2 text-sm"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                                 <p class="text-xs">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                             </div>
