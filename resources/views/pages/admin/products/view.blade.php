@@ -38,15 +38,61 @@
                 </div>
             </div>
 
-            <!-- -->
+            <!--
             <div class="bg-white flex flex-col items-start rounded-lg mb-8">
-                <div class="flex justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
+                <div class="flex items-center justify-between py-3 px-5 w-full space-x-3 border-b border-gray-400">
                     <span class="font-bold text-xl">Variants</span>
+                    <div class="flex items-center text-sm">
+                        <label>
+                            <input type="checkbox" />
+                            This product has variants
+                        </label>
+                    </div>
                 </div>
-                <div>
+                <div class="py-4 px-3 w-full">
+                    <div class="w-full border border-gray-300 rounded p-4">
+                        <div class="pb-3">
+                            <span class="text-base">Attributes</span>
+                        </div>
+                        <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-12 grid grid-cols-subgrid gap-3">
+                                <div class="col-span-3">
+                                    <span class="text-sm text-gray-600">Attribute name</span>
+                                </div>
+                                <div class="col-span-8">
+                                    <span class="text-sm text-gray-600">Attribute values (comma separated)</span>
+                                </div>
+                                <div class="col-span-1"></div>
+                            </div>
 
+                            <div class="col-span-12 grid grid-cols-subgrid gap-3">
+                                <div class="col-span-3">
+                                    <input type="text" class="w-full bg-gray-100 px-4 border border-gray-300 py-2 rounded text-sm focus:outline-none"/>
+                                </div>
+                                <div class="col-span-8">
+                                    <input type="text" class="w-full bg-gray-100 px-4 border border-gray-300 py-2 rounded text-sm focus:outline-none"/>
+                                </div>
+                                <div class="col-span-1 flex items-center">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-span-12 grid grid-cols-subgrid gap-3">
+                                <div class="col-span-3">
+                                    <input type="text" class="w-full bg-gray-100 px-4 border border-gray-300 py-2 rounded text-sm focus:outline-none"/>
+                                </div>
+                                <div class="col-span-8">
+                                    <input type="text" class="w-full bg-gray-100 px-4 border border-gray-300 py-2 rounded text-sm focus:outline-none"/>
+                                </div>
+                                <div class="col-span-1 flex items-center">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            -->
         </div>
         <div class="col-span-3">
             <!-- -->
