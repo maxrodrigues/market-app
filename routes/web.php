@@ -30,15 +30,15 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-//    Route::get('/login', LoginController::class)->name('login');
+    //    Route::get('/login', LoginController::class)->name('login');
     Route::get('/login', function () {
         Auth::loginUsingId(1);
+
         return redirect()->route('admin.dashboard');
     })->name('login');
 
     Route::get('/forgot-password', ForgotPasswordScreenController::class)->name('forgot-password');
     Route::post('/login', ProcessLoginController::class)->name('login.process');
-
 
     Route::group(['middleware' => ['auth']], function () {
         Route::get('dashboard', DashboardController::class)->name('dashboard');

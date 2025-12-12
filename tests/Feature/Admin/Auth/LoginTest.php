@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use Symfony\Component\HttpFoundation\Response;
+
 use function Pest\Faker\fake;
 
 it('has admin login page', function () {
@@ -10,7 +11,7 @@ it('has admin login page', function () {
         ->assertViewIs('pages.admin.login');
 });
 
-it ('Check if the username/email and password fields have been filled in.', function () {
+it('Check if the username/email and password fields have been filled in.', function () {
     $firstResponse = $this->post(route('admin.login.process'), [
         'username' => fake(config('app.faker_locale'))->safeEmail,
     ]);
@@ -26,16 +27,16 @@ it ('Check if the username/email and password fields have been filled in.', func
         ->assertStatus(Response::HTTP_FOUND);
 });
 
-it ('Check if the password field has more than 6 characters.', function () {
+it('Check if the password field has more than 6 characters.', function () {
     $response = $this->post(route('admin.login.process'), [
         'username' => fake(config('app.faker_locale'))->safeEmail,
         'password' => fake(config('app.faker_locale'))->words(5),
-    ])->assertSessionHasErrors(['password' => __('auth.password_min'),])
+    ])->assertSessionHasErrors(['password' => __('auth.password_min')])
         ->assertStatus(Response::HTTP_FOUND);
 
 });
 
-it ('Returns an error when credentials do not match.', function() {
+it('Returns an error when credentials do not match.', function () {
     $this->post(route('admin.login.process'), [
         'username' => fake(config('app.faker_locale'))->safeEmail,
         'password' => fake(config('app.faker_locale'))->password(6, 128),
@@ -46,7 +47,7 @@ it ('Returns an error when credentials do not match.', function() {
         ->assertStatus(Response::HTTP_FOUND);
 });
 
-it ('redirects to the administrative dashboard after successful login.', function () {
+it('redirects to the administrative dashboard after successful login.', function () {
     $user = User::factory()->create([
         'password' => 'p@ssw0rdS',
     ]);
@@ -60,4 +61,4 @@ it ('redirects to the administrative dashboard after successful login.', functio
         ->assertRedirect(route('admin.dashboard'));
 });
 
-todo ('Check if the password field contains uppercase letters, lowercase letters, and numbers.');
+todo('Check if the password field contains uppercase letters, lowercase letters, and numbers.');

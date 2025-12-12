@@ -12,6 +12,6 @@ class LoginController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view ('pages.admin.login');
+        return view('pages.admin.login');
     }
 }
