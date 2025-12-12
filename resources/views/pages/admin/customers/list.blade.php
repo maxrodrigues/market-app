@@ -60,7 +60,7 @@
                             </td>
                             <td class="text-center">
                                 <div class="flex justify-center items-center space-x-2">
-                                    <a href="{{ route('admin.products.view') }}">
+                                    <a href="{{ route('admin.customers.view') }}">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
                                 </div>
